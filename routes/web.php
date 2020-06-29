@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', 'TestSocketController@home');
+    Route::get('/order', 'TestSocketController@index');
+
+    Route::get('/auth', 'TestSocketController@authUser');
 });

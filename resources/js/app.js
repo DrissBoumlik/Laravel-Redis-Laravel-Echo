@@ -23,7 +23,7 @@ $.ajax({
         console.log(channel);
         _echo.private(channel)
             .listen('.Order', function (e) {
-                console.log("private", e);
+                console.log(e);
             });
     }
 });

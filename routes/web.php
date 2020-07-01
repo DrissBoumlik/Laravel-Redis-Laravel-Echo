@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'TestSocketController@home');
-    Route::get('/order', 'TestSocketController@index');
+    Route::get('/order', 'TestSocketController@order');
 
     Route::get('/auth', 'TestSocketController@authUser');
 });

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class TestSocketController extends Controller
 {
-    public function index()
+    public function order()
     {
         $order = Order::create([
             'user_id' => auth()->user()->id,
